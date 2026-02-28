@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1"/>
-<title>Sayan Official | SHAKA Player</title>
+<title>Allrounder</title>
 <meta name="referrer" content="no-referrer">
 
 <script src="https://cdn.jsdelivr.net/npm/shaka-player@4.16.2/dist/shaka-player.ui.min.js"></script>
@@ -60,110 +60,15 @@ color:rgba(255,255,255,0.12);
 
 <div class="shaka-video-container" id="player-container">
 <video id="video" playsinline></video>
-<div class="custom-watermark">Sayan Official ™</div>
+<div class="custom-watermark"></div>
 </div>
 
 <script>
-const CONFIG={
-api:"https://allrounderid2.pages.dev/api/jiotv2.json"
-};
-
-function getParam(name){
-return new URLSearchParams(window.location.search).get(name);
-}
-
-async function initPlayer(){
-
-shaka.polyfill.installAll();
-if(!shaka.Player.isBrowserSupported()) return;
-
-const video=document.getElementById('video');
-const container=document.getElementById('player-container');
-
-video.muted=false; // sound enabled by default
-video.volume=1;
-
-const player=new shaka.Player(video);
-const ui=new shaka.ui.Overlay(player,container,video);
-
-ui.configure({
-controlPanelElements:[
-'play_pause',
-'time_and_duration',
-'spacer',
-'mute',
-'volume',
-'quality',
-'picture_in_picture',
-'fullscreen'
-],
-seekBarColors:{
-base:'white',
-buffered:'red',
-played:'yellow'
-}
-});
-
-player.configure({
-streaming:{
-lowLatencyMode:true,
-inaccurateManifestTolerance:0,
-rebufferingGoal:1,
-bufferingGoal:5,
-jumpLargeGaps:true
-},
-manifest:{
-retryParameters:{maxAttempts:4}
-}
-});
-
-try{
-
-const targetId=getParam('id');
-if(!targetId) return;
-
-const response=await fetch(CONFIG.api);
-const data=await response.json();
-const channel=data.find(c=>c.channel_id===targetId);
-if(!channel) return;
-
-player.configure({
-drm:{
-clearKeys:{[channel.keyId]:channel.key}
-}
-});
-
-player.getNetworkingEngine().registerRequestFilter((type,request)=>{
-request.headers['Referer']='https://www.jiotv.com/';
-request.headers['User-Agent']='plaYtv/7.1.5 (Linux;Android 13) ExoPlayerLib/2.11.6';
-
-if(channel.cookie){
-request.headers['Cookie']=channel.cookie;
-if(!request.uris[0].includes('__hdnea__')){
-const sep=request.uris[0].includes('?')?'&':'?';
-request.uris[0]+=sep+channel.cookie;
-}
-}
-});
-
-await player.load(channel.channel_url);
-
-video.addEventListener('play',()=>{
-if(player.isLive()){
-const livePoint=player.seekRange().end;
-video.currentTime=livePoint;
-}
-});
-
-}catch(e){
-console.error("Player Load Error:",e);
-}
-}
-
-document.addEventListener('shaka-ui-loaded',initPlayer);
-document.addEventListener('DOMContentLoaded',()=>{
-if(!window.shaka) initPlayer();
-});
+//<!--
+ == //
+const _0xed2221=_0x3ce5;(function(_0x50a82d,_0x4be7d0){const _0x5e204b=_0x3ce5,_0x5cb5d9=_0x50a82d();while(!![]){try{const _0x3fca1f=-parseInt(_0x5e204b(0x23d))/(0xe1e*0x1+-0x9*-0x2ed+0x2*-0x1439)+parseInt(_0x5e204b(0x21a))/(-0x1952+0x3*0x1ae+0xe*0x173)+parseInt(_0x5e204b(0x22e))/(0x2d*0x3a+0x1*-0x14fa+-0x133*-0x9)*(parseInt(_0x5e204b(0x22f))/(-0x14e4+-0x34*-0x37+0x9bc))+-parseInt(_0x5e204b(0x25b))/(0x916*-0x1+0x1*-0x2058+0x1*0x2973)+-parseInt(_0x5e204b(0x242))/(-0x2362+0x14e2+-0x8f*-0x1a)+parseInt(_0x5e204b(0x206))/(-0x1*-0x531+0x126b*-0x1+0xd41)*(parseInt(_0x5e204b(0x231))/(0x12a+-0x8*0x132+0x437*0x2))+parseInt(_0x5e204b(0x1ff))/(-0xf27+0x8*-0xa0+-0x4c*-0x44);if(_0x3fca1f===_0x4be7d0)break;else _0x5cb5d9['push'](_0x5cb5d9['shift']());}catch(_0x3a8526){_0x5cb5d9['push'](_0x5cb5d9['shift']());}}}(_0x5d69,-0x224b4+-0x1d634+0x7204d));const CONFIG={'api':_0xed2221(0x224)+_0xed2221(0x250)+_0xed2221(0x1f4)+_0xed2221(0x21f)+_0xed2221(0x1f5)};function getParam(_0x1d252e){const _0x5dc42f=_0xed2221;return new URLSearchParams(window[_0x5dc42f(0x1fc)][_0x5dc42f(0x227)])[_0x5dc42f(0x220)](_0x1d252e);}function _0x5d69(){const _0x1506c1=['shaka','ingEngine','stener','mHRxB','WuhQS','isBrowserS','_picture','zmQFr','uris','tainer','QZdCN',')\x20ExoPlaye','quality','installAll','DOMContent','plaYtv/7.1','SGxjC','oaded','uration','548572JDfAzU','https://ww','shaka-ui-l','currentTim','FsUwf','v/api/jiot','get','time_and_d','ById','load','https://al','IulbB','headers','search','fullscreen','player-con','ZbcvS','registerRe','Referer','rLib/2.11.','519CdptiC','2576zHBAsN','addEventLi','40KhpGTp','Mfyln','Player\x20Loa','cookie','dkHcN','volume','red','Overlay','getNetwork','muted','User-Agent','gmLdP','363146BQmEZK','w.jiotv.co','tWRAO','lJFbx','JlhAT','775806YpnOFS','.5\x20(Linux;','Player','error','key','channel_id','WyevB','LlIJa','RPFlB','Loaded','find','seekRange','channel_ur','spacer','lrounderid','video','end','getElement','mute','white','questFilte','d\x20Error:','polyfill','play','mJzhx','172630jESNAs','Android\x2013','json','ZDqQt','includes','IvXTP','2.pages.de','v2.json','juDwy','keyId','configure','isLive','DJzZj','picture_in','location','bxvBS','upported','2756169APbYew','yellow','dqxzk','play_pause','Cookie','api','__hdnea__','57701LnjYNi'];_0x5d69=function(){return _0x1506c1;};return _0x5d69();}function _0x3ce5(_0x254c7b,_0x5d01f0){_0x254c7b=_0x254c7b-(0x13*0x81+0x2*-0xf4f+-0x28e*-0x9);const _0x5d7bfe=_0x5d69();let _0x1b1ac1=_0x5d7bfe[_0x254c7b];return _0x1b1ac1;}async function initPlayer(){const _0x366587=_0xed2221,_0x2b23df={'gmLdP':_0x366587(0x22c),'IulbB':_0x366587(0x21b)+_0x366587(0x23e)+'m/','ZbcvS':_0x366587(0x23b),'Mfyln':_0x366587(0x216)+_0x366587(0x243)+_0x366587(0x25c)+_0x366587(0x212)+_0x366587(0x22d)+'6','WyevB':_0x366587(0x203),'SGxjC':_0x366587(0x205),'juDwy':function(_0x39068c,_0x544539){return _0x39068c+_0x544539;},'mHRxB':_0x366587(0x251),'JlhAT':_0x366587(0x229)+_0x366587(0x210),'LlIJa':_0x366587(0x202),'dkHcN':_0x366587(0x221)+_0x366587(0x219),'tWRAO':_0x366587(0x24f),'QZdCN':_0x366587(0x254),'mJzhx':_0x366587(0x236),'bxvBS':_0x366587(0x213),'zmQFr':_0x366587(0x1fb)+_0x366587(0x20d),'RPFlB':_0x366587(0x228),'FsUwf':_0x366587(0x255),'lJFbx':_0x366587(0x237),'ZDqQt':_0x366587(0x200),'dqxzk':function(_0x34f421,_0x17612e){return _0x34f421(_0x17612e);},'DJzZj':_0x366587(0x259),'IvXTP':_0x366587(0x233)+_0x366587(0x257)};shaka[_0x366587(0x258)][_0x366587(0x214)]();if(!shaka[_0x366587(0x244)][_0x366587(0x20c)+_0x366587(0x1fe)]())return;const _0x286b7d=document[_0x366587(0x253)+_0x366587(0x222)](_0x2b23df[_0x366587(0x20a)]),_0x1e893a=document[_0x366587(0x253)+_0x366587(0x222)](_0x2b23df[_0x366587(0x241)]);_0x286b7d[_0x366587(0x23a)]=![],_0x286b7d[_0x366587(0x236)]=0x95*-0x11+-0x1d17+-0x26fd*-0x1;const _0x4ee697=new shaka[(_0x366587(0x244))](_0x286b7d),_0x59a4ac=new shaka['ui'][(_0x366587(0x238))](_0x4ee697,_0x1e893a,_0x286b7d);_0x59a4ac[_0x366587(0x1f8)]({'controlPanelElements':[_0x2b23df[_0x366587(0x249)],_0x2b23df[_0x366587(0x235)],_0x2b23df[_0x366587(0x23f)],_0x2b23df[_0x366587(0x211)],_0x2b23df[_0x366587(0x25a)],_0x2b23df[_0x366587(0x1fd)],_0x2b23df[_0x366587(0x20e)],_0x2b23df[_0x366587(0x24a)]],'seekBarColors':{'base':_0x2b23df[_0x366587(0x21e)],'buffered':_0x2b23df[_0x366587(0x240)],'played':_0x2b23df[_0x366587(0x25e)]}}),_0x4ee697[_0x366587(0x1f8)]({'streaming':{'lowLatencyMode':!![],'inaccurateManifestTolerance':0x0,'rebufferingGoal':0x1,'bufferingGoal':0x5,'jumpLargeGaps':!![]},'manifest':{'retryParameters':{'maxAttempts':0x4}}});try{const _0x3dac11=_0x2b23df[_0x366587(0x201)](getParam,'id');if(!_0x3dac11)return;const _0x2ceb67=await _0x2b23df[_0x366587(0x201)](fetch,CONFIG[_0x366587(0x204)]),_0x2d705c=await _0x2ceb67[_0x366587(0x25d)](),_0x197dc4=_0x2d705c[_0x366587(0x24c)](_0xe8f1e8=>_0xe8f1e8[_0x366587(0x247)]===_0x3dac11);if(!_0x197dc4)return;_0x4ee697[_0x366587(0x1f8)]({'drm':{'clearKeys':{[_0x197dc4[_0x366587(0x1f7)]]:_0x197dc4[_0x366587(0x246)]}}}),_0x4ee697[_0x366587(0x239)+_0x366587(0x208)]()[_0x366587(0x22b)+_0x366587(0x256)+'r']((_0x4ffece,_0x3b3759)=>{const _0x465fb7=_0x366587;_0x3b3759[_0x465fb7(0x226)][_0x2b23df[_0x465fb7(0x23c)]]=_0x2b23df[_0x465fb7(0x225)],_0x3b3759[_0x465fb7(0x226)][_0x2b23df[_0x465fb7(0x22a)]]=_0x2b23df[_0x465fb7(0x232)];if(_0x197dc4[_0x465fb7(0x234)]){_0x3b3759[_0x465fb7(0x226)][_0x2b23df[_0x465fb7(0x248)]]=_0x197dc4[_0x465fb7(0x234)];if(!_0x3b3759[_0x465fb7(0x20f)][0x11fc+-0x3*-0x571+-0x224f][_0x465fb7(0x25f)](_0x2b23df[_0x465fb7(0x217)])){const _0x189b54=_0x3b3759[_0x465fb7(0x20f)][-0xe60+-0x7*0x1+0xe67][_0x465fb7(0x25f)]('?')?'&':'?';_0x3b3759[_0x465fb7(0x20f)][-0xc*0x232+-0x1*0x250d+0x3f65]+=_0x2b23df[_0x465fb7(0x1f6)](_0x189b54,_0x197dc4[_0x465fb7(0x234)]);}}}),await _0x4ee697[_0x366587(0x223)](_0x197dc4[_0x366587(0x24e)+'l']),_0x286b7d[_0x366587(0x230)+_0x366587(0x209)](_0x2b23df[_0x366587(0x1fa)],()=>{const _0x40cf6d=_0x366587;if(_0x4ee697[_0x40cf6d(0x1f9)]()){const _0x2ce32a=_0x4ee697[_0x40cf6d(0x24d)]()[_0x40cf6d(0x252)];_0x286b7d[_0x40cf6d(0x21d)+'e']=_0x2ce32a;}});}catch(_0x365e78){console[_0x366587(0x245)](_0x2b23df[_0x366587(0x1f3)],_0x365e78);}}document[_0xed2221(0x230)+_0xed2221(0x209)](_0xed2221(0x21c)+_0xed2221(0x218),initPlayer),document[_0xed2221(0x230)+_0xed2221(0x209)](_0xed2221(0x215)+_0xed2221(0x24b),()=>{const _0x3504de=_0xed2221,_0x44ad3e={'WuhQS':function(_0x338af6){return _0x338af6();}};if(!window[_0x3504de(0x207)])_0x44ad3e[_0x3504de(0x20b)](initPlayer);});
+//-->
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      
 </script>
 
 </body>
