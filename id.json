@@ -36,7 +36,7 @@
       "id": "hub",
       "name": "hub",
       "type": "iframe",
-      "iframeSrc": "https://allrounder-king.pages.dev/hub-4",
+      "iframeSrc": "https://allrounder-live.pages.dev/channel/hub5",
       "hit": "https://hit-counter-theta.vercel.app/api/hit?key=hindi",
       "get": "https://hit-counter-theta.vercel.app/api/get?key=hindi"
     },
