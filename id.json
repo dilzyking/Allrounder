@@ -4,7 +4,7 @@
       "id": "hindi",
       "name": "Star Sports Hindi",
       "type": "iframe",
-      "iframeSrc": "https://allrounder-live.pages.dev/jjiotv/player?id=1985",
+      "iframeSrc": "https://allrounderid2.pages.dev/jjiotv/player?id=1108",
       "hit": "https://hit-counter-theta.vercel.app/api/hit?key=hindi",
       "get": "https://hit-counter-theta.vercel.app/api/get?key=hindi"
     },
