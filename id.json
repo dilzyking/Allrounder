@@ -44,7 +44,7 @@
       "id": "tnt",
       "name": "TNT Sports",
       "type": "iframe",
-      "iframeSrc": "https://allrounder-rho.vercel.app/world-sports/player.html?id=tnt-sports-3",
+      "iframeSrc": "https://allrounder-live.pages.dev/channel/tnt-2",
       "hit": "https://hit-counter-theta.vercel.app/api/hit?key=tnt",
       "get": "https://hit-counter-theta.vercel.app/api/get?key=tnt"
     },
