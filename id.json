@@ -60,7 +60,7 @@
       "id": "willow",
       "name": "Willow",
       "type": "iframe",
-      "iframeSrc": "https://allrounderfuck.vercel.app/channel/willow.html",
+      "iframeSrc": "https://allrounder-theta.vercel.app/channel/willow.html",
       "hit": "https://hit-counter-theta.vercel.app/api/hit?key=willow",
       "get": "https://hit-counter-theta.vercel.app/api/get?key=willow"
     },
