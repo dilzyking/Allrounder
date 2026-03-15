@@ -172,7 +172,7 @@
       "id": "jio-hotstar",
       "name": "Jio Hotstar",
       "type": "iframe",
-      "iframeSrc": "https://allrounder-live2.pages.dev/channel/hotstar",
+      "iframeSrc": "https://allrounder-live2.pages.dev/kick-player?id=Amritraj0",
       "hit": "https://hit-counter-theta.vercel.app/api/hit?key=jio-hotstar",
       "get": "https://hit-counter-theta.vercel.app/api/get?key=jio-hotstar"
     },
