@@ -228,7 +228,7 @@
       "id": "youtube",
       "name": "Youtube",
       "type": "iframe",
-      "iframeSrc": "https://www.youtube.com/embed/3CtxitAXc5c",
+      "iframeSrc": "https://www.youtube.com/embed/C2HtKCVQ6B0",
       "hit": "https://hit-counter-theta.vercel.app/api/hit?key=youtube",
       "get": "https://hit-counter-theta.vercel.app/api/get?key=youtube"
     },
