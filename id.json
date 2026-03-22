@@ -1,4 +1,4 @@
-{
+no{
   "iframes": [
     {
       "id": "hindi",
@@ -228,7 +228,7 @@
       "id": "youtube",
       "name": "Youtube",
       "type": "iframe",
-      "iframeSrc": "https://www.youtube.com/live/3CtxitAXc5c?si=26XjUClhkL5dhuMo",
+      "iframeSrc": "https://www.youtube.com/embed/3CtxitAXc5c",
       "hit": "https://hit-counter-theta.vercel.app/api/hit?key=youtube",
       "get": "https://hit-counter-theta.vercel.app/api/get?key=youtube"
     },
