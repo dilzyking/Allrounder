@@ -74,12 +74,7 @@
 (function(){
   var kicked = false;
 
-  function kick(){
-    if(kicked) return;
-    kicked = true;
-    window.location.replace('');
-  }
-
+  window.location.reload();
   /* ── Method 1: window size heuristic (docked devtools panel) ── */
   var THRESH = 160;
   function checkSize(){
