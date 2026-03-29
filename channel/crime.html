@@ -2,16 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<script>
-(function(){
-  var ref = document.referrer;
-  var allowed = 'iconictvlive.github.io';
-  // If no referrer or referrer is not from the allowed host, redirect to main site
-  if(!ref || ref.indexOf(allowed) === -1){
-    window.location.replace('https://iconictvlive.github.io');
-  }
-})();
-</script>
+
 <script>
 /* ── Geo-check: only block confirmed non-India users ── */
 /* Safety: fails OPEN — if API errors, Indian users are never blocked */
