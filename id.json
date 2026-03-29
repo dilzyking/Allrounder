@@ -132,7 +132,7 @@
       "id": "fox",
       "name": "Fox Cricket 501",
       "type": "iframe",
-      "iframeSrc": "https://allrounderlive.pages.dev/dilz?id=65656576",
+      "iframeSrc": "https://allrounder-live2.pages.dev/channel/fox",
       "hit": "https://hit-counter-theta.vercel.app/api/hit?key=fox",
       "get": "https://hit-counter-theta.vercel.app/api/get?key=fox"
     },
