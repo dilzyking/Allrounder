@@ -62,6 +62,41 @@
   </div>
 
   <script>
+    
+
+  // ADD THIS BLOCK HERE (TOP MOST)
+  async function isBraveBrowser() {
+    return (navigator.brave && await navigator.brave.isBrave()) || false;
+  }
+
+  (async () => {
+    const isBrave = await isBraveBrowser();
+
+    if (isBrave) {
+      const currentUrl = window.location.href;
+
+      // Try auto open in Chrome (Android)
+      window.location.href = "intent://" + currentUrl.replace(/^https?:\/\//, "") +
+        "#Intent;scheme=https;package=com.android.chrome;end";
+
+      // Fallback UI
+      setTimeout(() => {
+        document.body.innerHTML = `
+          <div style="color:white;text-align:center;padding:20px;">
+            <h2>Open in Chrome</h2>
+            <p>This stream may not work in Brave browser.</p>
+            <a href="${currentUrl}" style="color:yellow;font-size:18px;">
+              Tap here to open in Chrome
+            </a>
+          </div>
+        `;
+      }, 2000);
+
+      return; // ⛔ STOP player from loading in Brave
+    }
+  })();
+
+  
     const CONFIG = {
       streamUrl: "https://jiotvbpkmob.cdn.jio.com/bpk-tv/Star_Sports_1_Tamil_BTS/output/index.mpd",
       keyId: "d0d750ebd52b5756aa7fb833f61ceece",
