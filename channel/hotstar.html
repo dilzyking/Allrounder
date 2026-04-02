@@ -1,114 +1,44 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Nimo TV Player</title>
+  <meta charset="UTF-8">
+  <title>Hi - Odysee</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-57TPN48YM8"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
-<style>
-body {
-  margin: 0;
-  background: #000;
-  font-family: Arial, sans-serif;
-  overflow: hidden;
-}
-
-.player-container {
-  position: relative;
-  width: 100%;
-  height: 100vh;
-  background: black;
-}
-
-iframe {
-  width: 100%;
-  height: 100%;
-  border: none;
-}
-
-/* Controls */
-.controls {
-  position: absolute;
-  bottom: 20px;
-  right: 20px;
-  z-index: 10;
-}
-
-.btn {
-  background: rgba(0,0,0,0.6);
-  color: white;
-  border: none;
-  padding: 12px 15px;
-  margin-left: 10px;
-  border-radius: 8px;
-  font-size: 16px;
-  cursor: pointer;
-}
-
-.btn:hover {
-  background: rgba(255,255,255,0.2);
-}
-</style>
+  gtag('config', 'G-57TPN48YM8');
+</script>
+  <style>
+    html, body {
+      margin: 0;
+      height: 100%;
+      background: #000;
+      overflow: hidden;
+    }
+    iframe {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+  </style>
 </head>
-
 <body>
 
-<div class="player-container" id="player">
-
-  <iframe 
-    id="nimoFrame"
-    src="https://www.nimo.tv/embed/4049058852"
-    sandbox="allow-scripts allow-same-origin allow-presentation allow-fullscreen"
-    allow="fullscreen; autoplay"
-    referrerpolicy="no-referrer">
-  </iframe>
-
-  <div class="controls">
-    <button class="btn" onclick="goFullscreen()">⛶</button>
-    <button class="btn" onclick="rotateScreen()">🔄</button>
-  </div>
-
-</div>
-
-<script>
-// Fullscreen
-function goFullscreen() {
-  let elem = document.getElementById("player");
-
-  if (elem.requestFullscreen) {
-    elem.requestFullscreen();
-  } else if (elem.webkitRequestFullscreen) {
-    elem.webkitRequestFullscreen();
-  } else if (elem.msRequestFullscreen) {
-    elem.msRequestFullscreen();
-  }
-}
-
-// Rotate screen (mobile)
-async function rotateScreen() {
-  try {
-    if (screen.orientation && screen.orientation.lock) {
-      await screen.orientation.lock("landscape");
-    } else {
-      alert("Rotation not supported on this device/browser");
-    }
-  } catch (e) {
-    alert("Rotate failed: " + e.message);
-  }
-}
-
-// Prevent iframe click redirect outside
-document.getElementById("nimoFrame").addEventListener("load", function() {
-  try {
-    const iframeWindow = this.contentWindow;
-    iframeWindow.open = function() {
-      return null;
-    };
-  } catch(e) {
-    // Cross-origin restriction (normal)
-  }
-});
-</script>
-
+<iframe
+  src="https://player.kick.com/dillzy1234567890?autoplay=true&muted=true.html&autoplay=1"
+  allow="fullscreen; autoplay"
+  allowfullscreen
+  sandbox="allow-scripts allow-same-origin allow-presentation allow-popups">
+</iframe>
 </body>
+  <script>(function(s){s.dataset.zone='10603308',s.src='https://bvtpk.com/tag.min.js'})([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement('script')))</script>
+  
 </html>
