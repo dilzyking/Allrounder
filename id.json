@@ -156,7 +156,7 @@
       "id": "eng",
       "name": "Star Sports Select",
       "type": "iframe",
-      "iframeSrc": "https://allrounder-live3.pages.dev/star/star-1",
+      "iframeSrc": "https://allrounder-live4.pages.dev/star/star-1",
       "hit": "https://hit-counter-theta.vercel.app/api/hit?key=eng",
       "get": "https://hit-counter-theta.vercel.app/api/get?key=eng"
     },
