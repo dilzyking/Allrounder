@@ -4,7 +4,7 @@
       "id": "hindi",
       "name": "Star Sports Hindi",
       "type": "iframe",
-      "iframeSrc": "https://allrounder-live3.pages.dev/star/star-1-hindi",
+      "iframeSrc": "https://allrounder-live4.pages.dev/star/star-1-hindi",
       "hit": "https://hit-counter-theta.vercel.app/api/hit?key=hindi",
       "get": "https://hit-counter-theta.vercel.app/api/get?key=hindi"
     },
@@ -68,7 +68,7 @@
       "id": "willow",
       "name": "Willow",
       "type": "iframe",
-      "iframeSrc": "https://allrounder-live3.pages.dev/channel/willow",
+      "iframeSrc": "https://allrounder-live4.pages.dev/channel/willow",
       "hit": "https://hit-counter-theta.vercel.app/api/hit?key=willow",
       "get": "https://hit-counter-theta.vercel.app/api/get?key=willow"
     },
@@ -180,7 +180,7 @@
       "id": "jio-hotstar",
       "name": "Jio Hotstar",
       "type": "iframe",
-      "iframeSrc": "https://allrounder-live3.pages.dev/channel/hotstar",
+      "iframeSrc": "https://allrounder-live4.pages.dev/channel/hotstar",
       "hit": "https://hit-counter-theta.vercel.app/api/hit?key=jio-hotstar",
       "get": "https://hit-counter-theta.vercel.app/api/get?key=jio-hotstar"
     },
@@ -252,7 +252,7 @@
       "id": "telugu",
       "name": "Star",
       "type": "iframe",
-      "iframeSrc": "https://allrounder-live.pages.dev/star/telugu",
+      "iframeSrc": "https://allrounder-live4.pages.dev/star/telugu",
       "hit": "https://hit-counter-theta.vercel.app/api/hit?key=SS",
       "get": "https://hit-counter-theta.vercel.app/api/get?key=SS"
     },
@@ -260,7 +260,7 @@
       "id": "fancode",
       "name": "fancode",
       "type": "iframe",
-      "iframeSrc": "https://allrounder-live.pages.dev/fancode-player?url=https://in-mc-flive.fancode.com/mumbai/141407_english_hls_ab5ff6c24a21542_1ta-di_h264/1080p.m3u8?hdntl=Expires=1773474245~_GO=Generated~acl=/mumbai/141407_english_hls_ab5ff6c24a21542_1ta-di_h264/*~Signature=AR77L-Yyr9Cdj5X_0so3HpmxTUDWXrASgqUxhTGBOrJaU6SPgB5oUrj5FOVZ7FqeaDZnyCZIHYhGDYKbrr-wcsI214oJ",
+      "iframeSrc": "https://allrounder-live4.pages.dev/fancode-player?url=https://in-mc-flive.fancode.com/mumbai/141407_english_hls_ab5ff6c24a21542_1ta-di_h264/1080p.m3u8?hdntl=Expires=1773474245~_GO=Generated~acl=/mumbai/141407_english_hls_ab5ff6c24a21542_1ta-di_h264/*~Signature=AR77L-Yyr9Cdj5X_0so3HpmxTUDWXrASgqUxhTGBOrJaU6SPgB5oUrj5FOVZ7FqeaDZnyCZIHYhGDYKbrr-wcsI214oJ",
       "hit": "https://hit-counter-theta.vercel.app/api/hit?key=SS",
       "get": "https://hit-counter-theta.vercel.app/api/get?key=SS"
     },
@@ -268,7 +268,7 @@
       "id": "tamil",
       "name": "tamil",
       "type": "iframe",
-      "iframeSrc": "https://allrounder-live.pages.dev/star/tamil-1",
+      "iframeSrc": "https://allrounder-live4.pages.dev/star/tamil-1",
       "hit": "https://hit-counter-theta.vercel.app/api/hit?key=SS",
       "get": "https://hit-counter-theta.vercel.app/api/get?key=SS"
     }
