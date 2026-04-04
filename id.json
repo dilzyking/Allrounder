@@ -8,6 +8,15 @@
       "hit": "https://hit-counter-theta.vercel.app/api/hit?key=hindi",
       "get": "https://hit-counter-theta.vercel.app/api/get?key=hindi"
     },
+    
+    {
+      "id": "cricbuzz",
+      "name": "cricbuzz",
+      "type": "iframe",
+      "iframeSrc": "https://allrounder-live4.pages.dev/channel/cricbuzz",
+      "hit": "https://hit-counter-theta.vercel.app/api/hit?key=hindi",
+      "get": "https://hit-counter-theta.vercel.app/api/get?key=hindi"
+    },
     {
       "id": "ptv",
       "name": "Star Sports Hindi",
