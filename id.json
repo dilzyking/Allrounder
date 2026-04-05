@@ -109,7 +109,7 @@
       "id": "prime-eng",
       "name": "Prime English",
       "type": "iframe",
-      "iframeSrc": "https://allrounder-live.pages.dev/channel/prame.html",
+      "iframeSrc": "https://allrounder-live4.pages.dev/channel/prame.html",
       "hit": "https://hit-counter-theta.vercel.app/api/hit?key=prime-eng",
       "get": "https://hit-counter-theta.vercel.app/api/get?key=prime-eng"
     },
@@ -117,7 +117,7 @@
       "id": "sky-sports-nz",
       "name": "Sky Nz",
       "type": "iframe",
-      "iframeSrc": "https://cricketstan.github.io/Sky-sports-nz-/",
+      "iframeSrc": "https://allrounder-live4.pages.dev/channel/prame.html",
       "hit": "https://hit-counter-theta.vercel.app/api/hit?key=sky-sports-nz",
       "get": "https://hit-counter-theta.vercel.app/api/get?key=sky-sports-nz"
     },
