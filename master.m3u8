@@ -3,7 +3,7 @@
 #EXT-X-INDEPENDENT-SEGMENTS
 
 # ===== AUDIO =====
-#EXT-X-MEDIA:TYPE=AUDIO,GROUP-ID="audio",NAME="Default",DEFAULT=YES,AUTOSELECT=YES,URI="https://global-media.onlive.vn/live/audio/2689992740/origin/playlist.m3u8"
+#EXT-X-MEDIA:TYPE=AUDIO,GROUP-ID="audio",NAME="Default",DEFAULT=YES,AUTOSELECT=YES,URI="https://audio.sayanwork-studioo.workers.dev/?url=https://global-media.onlive.vn/live/audio/2689992740/origin/playlist.m3u8"
 
 # ===== VIDEO QUALITIES =====
 
