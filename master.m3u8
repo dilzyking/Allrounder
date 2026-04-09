@@ -2,23 +2,23 @@
 #EXT-X-VERSION:3
 #EXT-X-INDEPENDENT-SEGMENTS
 
-# ===== AUDIO =====
-#EXT-X-MEDIA:TYPE=AUDIO,GROUP-ID="audio",NAME="Default",DEFAULT=YES,AUTOSELECT=YES,URI="https://audio.sayanwork-studioo.workers.dev/?url=https://global-media.onlive.vn/live/audio/2689992740/origin/playlist.m3u8"
+# ===== AUDIO (PROXY) =====
+#EXT-X-MEDIA:TYPE=AUDIO,GROUP-ID="audio",NAME="Default",DEFAULT=YES,AUTOSELECT=YES,URI="https://audio.sayanwork-studioo.workers.dev/?url=https%3A%2F%2Fglobal-media.onlive.vn%2Flive%2Faudio%2F2689992740%2Forigin%2Fplaylist.m3u8"
 
 # ===== VIDEO QUALITIES =====
 
-# 1080p (1920x1080)
+# 1080p (if exists)
 #EXT-X-STREAM-INF:BANDWIDTH=5000000,RESOLUTION=1920x1080,AUDIO="audio"
 https://global-media.onlive.vn/live/video/2689992740/1920x1080/playlist.m3u8
 
-# 720p (1280x720)
+# 720p (confirmed)
 #EXT-X-STREAM-INF:BANDWIDTH=2500000,RESOLUTION=1280x720,AUDIO="audio"
 https://global-media.onlive.vn/live/video/2689992740/1280x720/playlist.m3u8
 
-# 480p (854x480)
+# 480p (if exists)
 #EXT-X-STREAM-INF:BANDWIDTH=1200000,RESOLUTION=854x480,AUDIO="audio"
 https://global-media.onlive.vn/live/video/2689992740/854x480/playlist.m3u8
 
-# 360p (640x360)
+# 360p (if exists)
 #EXT-X-STREAM-INF:BANDWIDTH=800000,RESOLUTION=640x360,AUDIO="audio"
 https://global-media.onlive.vn/live/video/2689992740/640x360/playlist.m3u8
