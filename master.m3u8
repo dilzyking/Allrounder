@@ -1,0 +1,23 @@
+#EXTM3U
+#EXT-X-VERSION:3
+
+# ===== AUDIO TRACK =====
+#EXT-X-MEDIA:TYPE=AUDIO,GROUP-ID="audio",NAME="Hindi",DEFAULT=YES,AUTOSELECT=YES,URI="https://global-media.onlive.vn/live/audio/blvhoangluan/origin/playlist.m3u8"
+
+# ===== VIDEO QUALITIES =====
+
+# 1080p (1920x1080)
+#EXT-X-STREAM-INF:BANDWIDTH=5000000,RESOLUTION=1920x1080,AUDIO="audio"
+https://global-media.onlive.vn/live/video/blvhoangluan/1920x1080/playlist.m3u8
+
+# 720p (1280x720)
+#EXT-X-STREAM-INF:BANDWIDTH=2500000,RESOLUTION=1280x720,AUDIO="audio"
+https://global-media.onlive.vn/live/video/blvhoangluan/1280x720/playlist.m3u8
+
+# 480p (854x480)
+#EXT-X-STREAM-INF:BANDWIDTH=1200000,RESOLUTION=854x480,AUDIO="audio"
+https://global-media.onlive.vn/live/video/blvhoangluan/854x480/playlist.m3u8
+
+# 360p (640x360)
+#EXT-X-STREAM-INF:BANDWIDTH=800000,RESOLUTION=640x360,AUDIO="audio"
+https://global-media.onlive.vn/live/video/blvhoangluan/640x360/playlist.m3u8
