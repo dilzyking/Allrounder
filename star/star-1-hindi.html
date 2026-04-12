@@ -166,9 +166,8 @@ line-height:1.6;
     return;
   }
   const CONFIG={
-    streamUrl:"https://jiotvpllive.cdn.jio.com/bpk-tv/Star_Sports_HD1_Hindi_BTS/WDVLive/index.mpd",
-    keyId:"400131994b445d8c8817202248760fda",
-    key:"2d56cb6f07a75b9aff165d534ae2bfc4",
+    streamUrl:"https://vsd199.okcdn.ru/cmaf/14545874586367/sig/oUTA_F5avMM/expires/1776070563073/srcIp/152.58.188.3/urls/185.226.52.54/clientType/36/srcAg/CHROME/mid/13623177857023/get/dash_13623177857023.0zd_6X9jRes.mpd",
+    
     cookieUrl:"https://allrounder-live2.pages.dev/api/cookie.json"
   };
 
@@ -206,7 +205,8 @@ line-height:1.6;
 });
 
     player.configure({
-      drm:{clearKeys:{[CONFIG.keyId]:CONFIG.key}},
+      
+
       manifest:{defaultPresentationDelay:5},
       streaming:{
         lowLatencyMode:true,
@@ -256,4 +256,4 @@ line-height:1.6;
   <script>(function(s){s.dataset.zone='10603308',s.src='https://bvtpk.com/tag.min.js'})([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement('script')))</script>
   
 </body>
-</html> 
+</html>
