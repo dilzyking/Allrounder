@@ -4,7 +4,7 @@
       "id": "hindi",
       "name": "Star Sports Hindi",
       "type": "iframe",
-      "iframeSrc": "https://allrounder-live4.pages.dev/star/star-1-hindi",
+      "iframeSrc": "https://allrounder-live5.pages.dev/star/star-1-hindi",
       "hit": "https://hit-counter-theta.vercel.app/api/hit?key=hindi",
       "get": "https://hit-counter-theta.vercel.app/api/get?key=hindi"
     },
@@ -77,7 +77,7 @@
       "id": "willow",
       "name": "Willow",
       "type": "iframe",
-      "iframeSrc": "https://allrounder-live4.pages.dev/channel/willow",
+      "iframeSrc": "https://allrounder-live5.pages.dev/channel/willow",
       "hit": "https://hit-counter-theta.vercel.app/api/hit?key=willow",
       "get": "https://hit-counter-theta.vercel.app/api/get?key=willow"
     },
@@ -165,7 +165,7 @@
       "id": "eng",
       "name": "Star Sports Select",
       "type": "iframe",
-      "iframeSrc": "https://allrounder-live4.pages.dev/star/star-1",
+      "iframeSrc": "https://allrounder-live5.pages.dev/star/star-1",
       "hit": "https://hit-counter-theta.vercel.app/api/hit?key=eng",
       "get": "https://hit-counter-theta.vercel.app/api/get?key=eng"
     },
@@ -189,7 +189,7 @@
       "id": "jio-hotstar",
       "name": "Jio Hotstar",
       "type": "iframe",
-      "iframeSrc": "https://allrounder-live4.pages.dev/channel/hotstar",
+      "iframeSrc": "https://allrounder-live5.pages.dev/channel/hotstar",
       "hit": "https://hit-counter-theta.vercel.app/api/hit?key=jio-hotstar",
       "get": "https://hit-counter-theta.vercel.app/api/get?key=jio-hotstar"
     },
