@@ -1,134 +1,185 @@
-<!DOCTYPE html>  
-<html>  
-<head>  
-  <meta charset="UTF-8">  
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">  
-  <title>Willow</title>     
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/shaka-player/4.7.11/shaka-player.ui.min.js" crossorigin="anonymous"></script>  
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/shaka-player/4.7.11/controls.min.css" crossorigin="anonymous">  
-      
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-L7VPXZYQPN"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>fox Cricket</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  gtag('config', 'G-L7VPXZYQPN');
-</script>
-  <style>  
-   * { margin: 0; padding: 0; box-sizing: border-box; }  
-    html, body {  
-      background: #000;  
-      height: 100vh;  
-      width: 100vw;  
-      overflow: hidden;  
-      font-family: system-ui, -apple-system, sans-serif;  
-    }  
-    .shaka-video-container {  
-      position: absolute;  
-      inset: 0;  
-      width: 100%;  
-      height: 100%;  
-    }  
-    video {  
-      width: 100%;  
-      height: 100%;  
-      background: #000;  
-      object-fit: contain;  
-    }  
-    .shaka-spinner-container,  
-    .shaka-spinner,  
-    .shaka-spinner-svg {  
-      display: none !important;  
-      visibility: hidden !important;  
-      opacity: 0 !important;  
-    }  
-  </style>  
-</head>  
+  <!-- JW Player -->
+  <script src="https://content.jwplatform.com/libraries/SAHhwvZq.js"></script>
 
- 
-  
-  <body>  
-  <div class="shaka-video-container" data-shaka-player>  
-    <video autoplay playsinline preload="metadata" poster="https://elamplificador.com/wp-content/uploads/2023/08/trucos-amazon-primevideo-ksrD-620x349@abc.png"></video>  
-  </div>  
-  
-  <script>  
-    document.addEventListener('DOMContentLoaded', async () => {  
-      shaka.polyfill.installAll();  
-  
-      if (!shaka.Player.isBrowserSupported()) {  
-        console.error('Browser not supported');  
-        return;  
-      }  
-  
-      const video = document.querySelector('video');  
-      const player = new shaka.Player();  
-      await player.attach(video);  
-  
-      const container = document.querySelector('.shaka-video-container');  
-      const ui = new shaka.ui.Overlay(player, container, video);  
-  
-      ui.configure({  
-        controlPanelElements: [  
-          'play_pause', 'time_and_duration', 'mute', 'volume',  
-          'spacer', 'language', 'captions', 'picture_in_picture',  
-          'quality', 'fullscreen'  
-        ],  
-        volumeBarColors: {  
-  base: 'rgba(0, 136, 255, 0.3)',  
-  level: 'rgb(0, 136, 255)'  
-},  
-seekBarColors: {  
-  base: 'rgba(0, 136, 255, 0.3)',  
-  buffered: 'rgba(0, 136, 255, 0.6)',  
-  played: 'rgb(0, 136, 255)'  
-}
-      });  
-  
-   
-  
-      let streamUrl = "https://vsd259.okcdn.ru/cmaf/14933960362751/sig/gDqDyCsRxeM/expires/1776432902859/srcIp/47.31.79.170/urls/185.226.55.87/clientType/36/srcAg/CHROME/mid/13823492114431/get/dash_13823492114431.OvHE3ixvHFw.mpd";  
-  
-      player.configure({  
-        
-        streaming: {  
-          lowLatencyMode: true,  
-          bufferingGoal: 15,  
-          rebufferingGoal: 2,  
-          bufferBehind: 15,  
-          retryParameters: {  
-            timeout: 10000,  
-            maxAttempts: 5,  
-            baseDelay: 300,  
-            backoffFactor: 1.2  
-          },  
-          segmentRequestTimeout: 8000,  
-          segmentPrefetchLimit: 2,  
-          useNativeHlsOnSafari: true  
-        },  
-        manifest: {  
-          retryParameters: {  
-            timeout: 8000,  
-            maxAttempts: 3  
-          }  
-        }  
-      });  
-  
-      player.addEventListener('error', (event) => {  
-        console.error('Shaka Player Error:', event.detail);  
-      });  
-  
-      try {  
-        await player.load(streamUrl);  
-        console.log("Stream loaded successfully");  
-      } catch (error) {  
-        console.error('Load error:', error);  
-      }  
-    });  
-  </script>  
-  <script>(function(s){s.dataset.zone='10603308',s.src='https://bvtpk.com/tag.min.js'})([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement('script')))</script>
-  
-  </body>  
+  <style>
+    html, body {
+      margin: 0;
+      height: 100%;
+      background: #000;
+    }
+
+    .jwplayer {
+      position: absolute !important;
+      inset: 0;
+    }
+
+    .jwplayer.jw-flag-aspect-mode {
+      min-height: 100%;
+      max-height: 100%;
+    }
+
+    #visitor-counter {
+      position: fixed;
+      opacity: 0;
+      pointer-events: none;
+      z-index: -1;
+    }
+
+    /* Premium frame capture preview */
+    #capture-preview {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) scale(0.9);
+      background: linear-gradient(135deg, #1e1e1e 0%, #2d2d2d 100%);
+      padding: 30px;
+      border-radius: 16px;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.8);
+      z-index: 10000;
+      display: none;
+      max-width: 85%;
+      max-height: 85%;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      animation: fadeInScale 0.3s ease-out forwards;
+    }
+
+    @keyframes fadeInScale {
+      to {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 1;
+      }
+    }
+
+    #capture-preview.show {
+      display: block;
+      opacity: 0;
+    }
+
+    #capture-preview .preview-header {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      margin-bottom: 20px;
+      color: #4CAF50;
+      font-family: Arial, sans-serif;
+      font-size: 16px;
+      font-weight: 600;
+    }
+
+    #capture-preview img {
+      max-width: 100%;
+      max-height: 65vh;
+      display: block;
+      border-radius: 10px;
+    }
+
+    #capture-preview .info {
+      color: #888;
+      text-align: center;
+      margin-top: 16px;
+      font-family: Arial, sans-serif;
+      font-size: 13px;
+    }
+
+    .jw-svg-icon-capture {
+      fill: white;
+      width: 20px;
+      height: 20px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div id="jwplayerDiv"></div>
+
+  <!-- Premium frame capture preview -->
+  <div id="capture-preview">
+    <div class="preview-header">
+      ✔ Frame Captured Successfully
+    </div>
+    <img id="captured-image" alt="Captured Frame">
+    <div class="info">Image downloaded automatically</div>
+  </div>
+
+
+  <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const stream = urlParams.get('url') || "https://dillzyserver.freedekholive-577.workers.dev/live/dillzy.m3u8";
+
+    const player = jwplayer("jwplayerDiv");
+
+    player.setup({
+      file: stream,
+      autostart: true,
+      stretching: "uniform",
+      width: "100%",
+      type: "hls"
+    });
+
+    player.on('ready', function () {
+      const iconPath = `
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="jw-svg-icon jw-svg-icon-capture">
+        <path fill="currentColor" d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"/>
+      </svg>`;
+
+      player.addButton(
+        iconPath,
+        'Capture Frame',
+        captureFrame,
+        'capture-frame-btn'
+      );
+    });
+
+    function captureFrame() {
+      try {
+        const video = document.querySelector('video');
+        if (!video) {
+          alert('Video not found');
+          return;
+        }
+
+        const canvas = document.createElement('canvas');
+        canvas.width = video.videoWidth;
+        canvas.height = video.videoHeight;
+
+        const ctx = canvas.getContext('2d');
+        ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
+
+        canvas.toBlob(function (blob) {
+          const url = URL.createObjectURL(blob);
+          const a = document.createElement('a');
+          const timestamp = new Date().toISOString().replace(/[:.]/g, '-');
+          a.href = url;
+          a.download = `frame-${timestamp}.png`;
+          a.click();
+
+          const preview = document.getElementById('capture-preview');
+          const capturedImg = document.getElementById('captured-image');
+          capturedImg.src = url;
+          preview.classList.add('show');
+
+          setTimeout(() => {
+            preview.classList.remove('show');
+            URL.revokeObjectURL(url);
+          }, 2500);
+        }, 'image/png');
+
+      } catch (e) {
+        console.error(e);
+        alert("Capture failed!");
+      }
+    }
+  </script>
+
+</body>
 </html>
