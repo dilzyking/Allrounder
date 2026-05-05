@@ -87,17 +87,12 @@ seekBarColors: {
       });  
   
       // ✅ Your DRM Key + MPD URL  
-      let drmConfig = {  
-        clearKeys: {  
-          "9759d3e615fc51038bbca9f62fed6578":
- "7ffe28b57021208c09312685108c454f"  
-        }  
-      };  
+      
   
-      let streamUrl = "https://dck1-fs-live.dtcdn.dazn.com/out/v1/761f422bb93edb7b/60a80e11a0a641a18112dd08786a47f8/index.mpd";  
+      let streamUrl = "https://vsd121.okcdn.ru/cmaf/16215111961343/sig/Wxs0wdkulV8/expires/1778071584830/srcIp/152.59.168.22/urls/45.136.22.62/clientType/36/srcAg/CHROME/mid/14491938473983/get/dash_14491938473983.2-0sEYVdI3w.mpd";  
   
       player.configure({  
-        drm: drmConfig,  
+        
         streaming: {  
           lowLatencyMode: true,  
           bufferingGoal: 15,  
