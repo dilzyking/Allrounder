@@ -141,7 +141,7 @@
       "id": "fox",
       "name": "Fox Cricket 501",
       "type": "iframe",
-      "iframeSrc": "https://allrounder-live5.pages.dev/channel/fox1",
+      "iframeSrc": "https://allrounder-live6.pages.dev/channel/fox1",
       "hit": "https://hit-counter-theta.vercel.app/api/hit?key=fox",
       "get": "https://hit-counter-theta.vercel.app/api/get?key=fox"
     },
@@ -165,7 +165,7 @@
       "id": "eng",
       "name": "Star Sports Select",
       "type": "iframe",
-      "iframeSrc": "https://allrounder-live5.pages.dev/star/star-1",
+      "iframeSrc": "https://allrounder-live6.pages.dev/star/star-1",
       "hit": "https://hit-counter-theta.vercel.app/api/hit?key=eng",
       "get": "https://hit-counter-theta.vercel.app/api/get?key=eng"
     },
@@ -189,7 +189,7 @@
       "id": "jio-hotstar",
       "name": "Jio Hotstar",
       "type": "iframe",
-      "iframeSrc": "https://allrounder-live5.pages.dev/channel/hotstar",
+      "iframeSrc": "https://allrounder-live6.pages.dev/channel/hotstar",
       "hit": "https://hit-counter-theta.vercel.app/api/hit?key=jio-hotstar",
       "get": "https://hit-counter-theta.vercel.app/api/get?key=jio-hotstar"
     },
