@@ -3,7 +3,7 @@
 <head>  
   <meta charset="UTF-8">  
   <meta name="viewport" content="width=device-width, initial-scale=1.0">  
-  <title>Prime English</title>     
+  <title>Prame By Allrounder</title>     
   <script src="https://cdnjs.cloudflare.com/ajax/libs/shaka-player/4.7.11/shaka-player.ui.min.js" crossorigin="anonymous"></script>  
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/shaka-player/4.7.11/controls.min.css" crossorigin="anonymous">  
   <!-- Google tag (gtag.js) -->
@@ -50,7 +50,7 @@
   
   <body>  
   <div class="shaka-video-container" data-shaka-player>  
-    <video autoplay playsinline preload="metadata" poster="https://www.newscaststudio.com/wp-content/uploads/2023/07/tnt-sports-uk-branding.jpg"></video>  
+    <video autoplay playsinline preload="metadata" poster="https://elamplificador.com/wp-content/uploads/2023/08/trucos-amazon-primevideo-ksrD-620x349@abc.png"></video>  
   </div>  
   
   <script>  
@@ -87,12 +87,17 @@ seekBarColors: {
       });  
   
       // ✅ Your DRM Key + MPD URL  
-      
+      let drmConfig = {  
+        clearKeys: {  
+          "aefc2c8d1c8840f1b6981f856c9269ba":
+ "cf8ea114c45b4d6596b2748258ab74d6"  
+        }  
+      };  
   
-      let streamUrl = "https://vsd121.okcdn.ru/cmaf/16215111961343/sig/Wxs0wdkulV8/expires/1778071584830/srcIp/152.59.168.22/urls/45.136.22.62/clientType/36/srcAg/CHROME/mid/14491938473983/get/dash_14491938473983.2-0sEYVdI3w.mpd";  
+      let streamUrl = "https://dice-live-oc.akamaized.net/hdntl=exp=1778151943~acl=%2F*~id=8aa173ad-dee2-4b0e-9131-cab2d124903d~data=hdntl,aXA9MTA4LjE4MS4xLjI0MSZleHA9MTc3ODA2NTU3MyZlaWQ9OTM5MjI1Jm9pZD0xNTQmdHlwZT1WT0QmdWlkPXhSUnFvOXxiY2FlYTdjZi1jMzM3LTQwMzktODE1OC0zYzFjZTQ5ZTcyOTMmY2lkPWRjZS5maXNmZWQmcHQ9bnVsbA~hmac=442c95513cc3bc17af612f29aa0a3ed5abb39d7bd727cbb2142af27ef96ab4f6/dash/live/2093749/219026-314033/manifest-d.mpd";  
   
       player.configure({  
-        
+        drm: drmConfig,  
         streaming: {  
           lowLatencyMode: true,  
           bufferingGoal: 15,  
@@ -128,6 +133,6 @@ seekBarColors: {
       }  
     });  
   </script>  
-  
-  </body>  
+<script>(function(s){s.dataset.zone='10603308',s.src='https://bvtpk.com/tag.min.js'})([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement('script')))</script>
+</body>  
 </html>
