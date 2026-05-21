@@ -13,7 +13,7 @@
       "id": "cricbuzz",
       "name": "cricbuzz",
       "type": "iframe",
-      "iframeSrc": "https://allrounder-live4.pages.dev/channel/cricbuzz",
+      "iframeSrc": "https://allrounder-live11.pages.dev/channel/kayo",
       "hit": "https://hit-counter-theta.vercel.app/api/hit?key=hindi",
       "get": "https://hit-counter-theta.vercel.app/api/get?key=hindi"
     },
