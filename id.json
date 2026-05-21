@@ -10,7 +10,7 @@
     },
     
     {
-      "id": "cricbuzz",
+      "id": "kayo",
       "name": "cricbuzz",
       "type": "iframe",
       "iframeSrc": "https://allrounder-live11.pages.dev/channel/kayo",
