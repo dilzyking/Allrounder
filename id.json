@@ -17,6 +17,15 @@
       "hit": "https://hit-counter-theta.vercel.app/api/hit?key=hindi",
       "get": "https://hit-counter-theta.vercel.app/api/get?key=hindi"
     },
+    
+    {
+      "id": "kayo2",
+      "name": "cricbuzz",
+      "type": "iframe",
+      "iframeSrc": "https://allrounder-live11.pages.dev/channel/kayo-2",
+      "hit": "https://hit-counter-theta.vercel.app/api/hit?key=hindi",
+      "get": "https://hit-counter-theta.vercel.app/api/get?key=hindi"
+    },
     {
       "id": "ptv",
       "name": "Star Sports Hindi",
