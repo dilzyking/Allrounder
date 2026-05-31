@@ -13,7 +13,7 @@
       "id": "kayo",
       "name": "cricbuzz",
       "type": "iframe",
-      "iframeSrc": "https://allrounder-live11.pages.dev/channel/kayo",
+      "iframeSrc": "https://allrounder-live12.pages.dev/channel/kayo",
       "hit": "https://hit-counter-theta.vercel.app/api/hit?key=hindi",
       "get": "https://hit-counter-theta.vercel.app/api/get?key=hindi"
     },
@@ -22,7 +22,7 @@
       "id": "kayo2",
       "name": "cricbuzz",
       "type": "iframe",
-      "iframeSrc": "https://allrounder-live11.pages.dev/channel/kayo-2",
+      "iframeSrc": "https://allrounder-live12.pages.dev/channel/kayo-2",
       "hit": "https://hit-counter-theta.vercel.app/api/hit?key=hindi",
       "get": "https://hit-counter-theta.vercel.app/api/get?key=hindi"
     },
@@ -86,7 +86,7 @@
       "id": "willow",
       "name": "Willow",
       "type": "iframe",
-      "iframeSrc": "https://allrounder-live11.pages.dev/channel/willow",
+      "iframeSrc": "https://allrounder-live12.pages.dev/channel/willow",
       "hit": "https://hit-counter-theta.vercel.app/api/hit?key=willow",
       "get": "https://hit-counter-theta.vercel.app/api/get?key=willow"
     },
@@ -126,7 +126,7 @@
       "id": "sky-sports-nz",
       "name": "Sky Nz",
       "type": "iframe",
-      "iframeSrc": "https://allrounder-live11.pages.dev/channel/hub5",
+      "iframeSrc": "https://allrounder-live12.pages.dev/channel/hub5",
       "hit": "https://hit-counter-theta.vercel.app/api/hit?key=sky-sports-nz",
       "get": "https://hit-counter-theta.vercel.app/api/get?key=sky-sports-nz"
     },
@@ -150,7 +150,7 @@
       "id": "fox",
       "name": "Fox Cricket 501",
       "type": "iframe",
-      "iframeSrc": "https://allrounder-live11.pages.dev/channel/fox1",
+      "iframeSrc": "https://allrounder-live12.pages.dev/channel/fox1",
       "hit": "https://hit-counter-theta.vercel.app/api/hit?key=fox",
       "get": "https://hit-counter-theta.vercel.app/api/get?key=fox"
     },
@@ -174,7 +174,7 @@
       "id": "eng",
       "name": "Star Sports Select",
       "type": "iframe",
-      "iframeSrc": "https://allrounder-live11.pages.dev/star/star-1",
+      "iframeSrc": "https://allrounder-live12.pages.dev/star/star-1",
       "hit": "https://hit-counter-theta.vercel.app/api/hit?key=eng",
       "get": "https://hit-counter-theta.vercel.app/api/get?key=eng"
     },
