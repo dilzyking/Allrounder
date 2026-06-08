@@ -70,7 +70,7 @@
       "id": "tnt",
       "name": "TNT Sports",
       "type": "iframe",
-      "iframeSrc": "https://allrounder-live2.pages.dev/channel/tnt-2",
+      "iframeSrc": "https://allrounder-live12.pages.dev/channel/tnt-2",
       "hit": "https://hit-counter-theta.vercel.app/api/hit?key=tnt",
       "get": "https://hit-counter-theta.vercel.app/api/get?key=tnt"
     },
