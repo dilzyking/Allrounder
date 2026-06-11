@@ -16,6 +16,14 @@
       "hit": "https://hit-counter-theta.vercel.app/api/hit?key=hindi",
       "get": "https://hit-counter-theta.vercel.app/api/get?key=hindi"
     },
+    {
+      "id": "fifa",
+      "name": "FIFA",
+      "type": "iframe",
+      "iframeSrc": "https://fifa-world-cup-live.pages.dev/fifa1",
+      "hit": "https://hit-counter-theta.vercel.app/api/hit?key=hindi",
+      "get": "https://hit-counter-theta.vercel.app/api/get?key=hindi"
+    },
        {
       "id": "zee-eng",
       "name": "zee-eng",
