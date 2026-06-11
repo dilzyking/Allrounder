@@ -8,7 +8,80 @@
       "hit": "https://hit-counter-theta.vercel.app/api/hit?key=hindi",
       "get": "https://hit-counter-theta.vercel.app/api/get?key=hindi"
     },
-    
+   {
+      "id": "zee-hindi",
+      "name": "Zee Hindi",
+      "type": "iframe",
+      "iframeSrc": "https://fifa-world-cup-live.pages.dev/hindi.html",
+      "hit": "https://hit-counter-theta.vercel.app/api/hit?key=hindi",
+      "get": "https://hit-counter-theta.vercel.app/api/get?key=hindi"
+    },
+       {
+      "id": "zee-eng",
+      "name": "zee-eng",
+      "type": "iframe",
+      "iframeSrc": "https://fifa-world-cup-live.pages.dev/english.html",
+      "hit": "https://hit-counter-theta.vercel.app/api/hit?key=hindi",
+      "get": "https://hit-counter-theta.vercel.app/api/get?key=hindi"
+    },
+
+   {
+      "id": "tsn",
+      "name": "Tsn",
+      "type": "iframe",
+      "iframeSrc": "https://fifa-world-cup-live.pages.dev/tsn",
+      "hit": "https://hit-counter-theta.vercel.app/api/hit?key=hindi",
+      "get": "https://hit-counter-theta.vercel.app/api/get?key=hindi"
+    },
+
+   {
+      "id": "dsports",
+      "name": "D Sports",
+      "type": "iframe",
+      "iframeSrc": "https://fifa-world-cup-live.pages.dev/dsports",
+      "hit": "https://hit-counter-theta.vercel.app/api/hit?key=hindi",
+      "get": "https://hit-counter-theta.vercel.app/api/get?key=hindi"
+    },
+   {
+      "id": "fox-sports",
+      "name": "Fox",
+      "type": "iframe",
+      "iframeSrc": "https://fifa-world-cup-live.pages.dev/fox-sports",
+      "hit": "https://hit-counter-theta.vercel.app/api/hit?key=hindi",
+      "get": "https://hit-counter-theta.vercel.app/api/get?key=hindi"
+    },
+   {
+      "id": "telemundo",
+      "name": "Star Sports Hindi",
+      "type": "iframe",
+      "iframeSrc": "https://fifa-world-cup-live.pages.dev/telemundo",
+      "hit": "https://hit-counter-theta.vercel.app/api/hit?key=hindi",
+      "get": "https://hit-counter-theta.vercel.app/api/get?key=hindi"
+    },
+   {
+      "id": "caze-tv",
+      "name": "caze Tv",
+      "type": "iframe",
+      "iframeSrc": "https://fifa-world-cup-live.pages.dev/caze-tv",
+      "hit": "https://hit-counter-theta.vercel.app/api/hit?key=hindi",
+      "get": "https://hit-counter-theta.vercel.app/api/get?key=hindi"
+    },
+   {
+      "id": "benin",
+      "name": "benin",
+      "type": "iframe",
+      "iframeSrc": "https://fifa-world-cup-live.pages.dev/benin",
+      "hit": "https://hit-counter-theta.vercel.app/api/hit?key=hindi",
+      "get": "https://hit-counter-theta.vercel.app/api/get?key=hindi"
+    },
+   {
+      "id": "sportv",
+      "name": "Star Sports Hindi",
+      "type": "iframe",
+      "iframeSrc": "https://fifa-world-cup-live.pages.dev/sportv",
+      "hit": "https://hit-counter-theta.vercel.app/api/hit?key=hindi",
+      "get": "https://hit-counter-theta.vercel.app/api/get?key=hindi"
+    },
     {
       "id": "kayo",
       "name": "cricbuzz",
