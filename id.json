@@ -164,6 +164,14 @@
       "get": "https://hit-counter-theta.vercel.app/api/get?key=tnt"
     },
     {
+      "id": "fancode",
+      "name": "Fancode",
+      "type": "iframe",
+      "iframeSrc": "https://allrounder-live12.pages.dev/hls",
+      "hit": "https://hit-counter-theta.vercel.app/api/hit?key=tnt",
+      "get": "https://hit-counter-theta.vercel.app/api/get?key=tnt"
+    },
+    {
       "id": "asiacup",
       "name": "Asia Cup",
       "type": "iframe",
@@ -364,7 +372,7 @@
       "get": "https://hit-counter-theta.vercel.app/api/get?key=SS"
     },
     {
-      "id": "fancode",
+      "id": "fncode",
       "name": "fancode",
       "type": "iframe",
       "iframeSrc": "https://allrounder-live4.pages.dev/fancode-player?url=https://in-mc-flive.fancode.com/mumbai/141407_english_hls_ab5ff6c24a21542_1ta-di_h264/1080p.m3u8?hdntl=Expires=1773474245~_GO=Generated~acl=/mumbai/141407_english_hls_ab5ff6c24a21542_1ta-di_h264/*~Signature=AR77L-Yyr9Cdj5X_0so3HpmxTUDWXrASgqUxhTGBOrJaU6SPgB5oUrj5FOVZ7FqeaDZnyCZIHYhGDYKbrr-wcsI214oJ",
