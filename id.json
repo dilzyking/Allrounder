@@ -25,7 +25,7 @@
       "get": "https://hit-counter-theta.vercel.app/api/get?key=hindi"
     },
     {
-      "id": "guli",
+      "id": "gulli",
       "name": "6ter",
       "type": "iframe",
       "iframeSrc": "https://fifa-world-cup-live.pages.dev/guli",
@@ -33,10 +33,10 @@
       "get": "https://hit-counter-theta.vercel.app/api/get?key=hindi"
     },
     {
-      "id": "mplus",
+      "id": "m6plus",
       "name": "6ter",
       "type": "iframe",
-      "iframeSrc": "https://fifa-world-cup-live.pages.dev/m",
+      "iframeSrc": "https://fifa-world-cup-live.pages.dev/m6",
       "hit": "https://hit-counter-theta.vercel.app/api/hit?key=hindi",
       "get": "https://hit-counter-theta.vercel.app/api/get?key=hindi"
     },
