@@ -9,6 +9,14 @@
       "get": "https://hit-counter-theta.vercel.app/api/get?key=hindi"
     },
     {
+      "id": "hindi2",
+      "name": "Star Sports Hindi",
+      "type": "iframe",
+      "iframeSrc": "https://allrounderlive.in/hindi2",
+      "hit": "https://hit-counter-theta.vercel.app/api/hit?key=hindi",
+      "get": "https://hit-counter-theta.vercel.app/api/get?key=hindi"
+    },
+    {
       "id": "6ter",
       "name": "6ter",
       "type": "iframe",
