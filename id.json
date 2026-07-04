@@ -239,7 +239,7 @@
       "id": "willow",
       "name": "Willow",
       "type": "iframe",
-      "iframeSrc": "https://allrounder-live12.pages.dev/channel/willow",
+      "iframeSrc": "https://allrounder2.dillzycreations.workers.dev/cricket/willow",
       "hit": "https://hit-counter-theta.vercel.app/api/hit?key=willow",
       "get": "https://hit-counter-theta.vercel.app/api/get?key=willow"
     },
@@ -327,7 +327,7 @@
       "id": "eng",
       "name": "Star Sports Select",
       "type": "iframe",
-      "iframeSrc": "https://allrounder-live12.pages.dev/star/star-1",
+      "iframeSrc": "https://allrounder2.dillzycreations.workers.dev/cricket/willow",
       "hit": "https://hit-counter-theta.vercel.app/api/hit?key=eng",
       "get": "https://hit-counter-theta.vercel.app/api/get?key=eng"
     },
