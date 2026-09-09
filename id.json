@@ -473,7 +473,7 @@
       "id": "tamil",
       "name": "tamil",
       "type": "iframe",
-      "iframeSrc": "https://allrounder-live4.pages.dev/star/tamil-1",
+      "iframeSrc": "https://allrounder2-0.pages.dev/cricket/tamil",
       "hit": "https://hit-counter-theta.vercel.app/api/hit?key=SS",
       "get": "https://hit-counter-theta.vercel.app/api/get?key=SS"
     }
