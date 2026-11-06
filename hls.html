@@ -1,261 +1,237 @@
+
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
 <meta charset="UTF-8">
-<title>CRICKLY FANCODE LIVE WEB PLAYER</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="theme-color" content="#000000">
+<title>Live Player</title>
 
-<meta name="referrer" content="no-referrer">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-
-<!-- FONT -->
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-
-<!-- YOUR MAIN CSS -->
-<link rel="stylesheet" href="style.css">
-
-<!-- SHAKA PLAYER -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/shaka-player/4.6.0/shaka-player.ui.min.js"></script>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/shaka-player/4.6.0/controls.min.css">
+<link rel="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css">
 
 <style>
-
-/* PLAYER ONLY STYLES */
-
-html,body{
-margin:0;
-padding:0;
-background:#000;
-height:100%;
-width:100%;
-overflow:hidden;
-font-family:'Poppins',sans-serif;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-.video-container{
-position:fixed;
-top:0;
-left:0;
-width:100%;
-height:100%;
-background:#000;
+html, body {
+  width: 100%;
+  height: 100%;
+  height: 100dvh;
+  overflow: hidden;
+  background: #000;
 }
 
-.shaka-video-container{
-width:100%;
-height:100%;
+.player-container {
+  width: 100vw;
+  height: 100vh;
+  height: 100dvh;
+  position: fixed;
+  inset: 0;
+  background: #000;
 }
 
-video{
-width:100%;
-height:100%;
-object-fit:contain;
-background:#000;
+video {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  background: #000;
 }
 
-/* LOADING */
-
-.loading-overlay{
-position:absolute;
-top:0;
-left:0;
-width:100%;
-height:100%;
-display:flex;
-align-items:center;
-justify-content:center;
-flex-direction:column;
-background:#000;
-color:#fff;
-z-index:2000;
-font-size:18px;
+.plyr {
+  width: 100%;
+  height: 100%;
+  --plyr-color-main: #e50914;
+  --plyr-video-background: #000;
+  --plyr-menu-background: #151515;
+  --plyr-menu-color: #fff;
+  --plyr-control-radius: 5px;
 }
 
-.spinner{
-border:4px solid rgba(255,255,255,.2);
-border-top:4px solid #3b82f6;
-border-radius:50%;
-width:40px;
-height:40px;
-animation:spin 1s linear infinite;
-margin-bottom:12px;
+.plyr--video .plyr__controls {
+  padding: 15px 12px;
+  background: linear-gradient(transparent, rgba(0,0,0,.9));
 }
 
-@keyframes spin{
-0%{transform:rotate(0deg)}
-100%{transform:rotate(360deg)}
+.plyr__video-wrapper {
+  height: 100%;
+  background: #000;
 }
 
+.plyr__video-wrapper video {
+  object-fit: contain;
+}
+
+.status {
+  position: absolute;
+  z-index: 5;
+  top: 15px;
+  left: 15px;
+  color: #fff;
+  background: rgba(20,20,20,.8);
+  border: 1px solid #333;
+  padding: 7px 11px;
+  border-radius: 5px;
+  font: 12px Arial, sans-serif;
+  pointer-events: none;
+}
+
+.status::before {
+  content: "";
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  background: #e50914;
+  border-radius: 50%;
+  margin-right: 7px;
+}
+
+@media (orientation: portrait) {
+  .plyr__video-wrapper video {
+    object-fit: contain;
+  }
+}
 </style>
-
 </head>
 
 <body>
-
-<div class="video-container">
-
-<div class="shaka-video-container" data-shaka-player>
-
-<video id="video" autoplay playsinline muted></video>
-
-<div id="loading" class="loading-overlay">
-<div class="spinner"></div>
-Analyzing the video...
+<div class="player-container">
+  <div class="status" id="status">Connecting</div>
+  <video id="video" controls playsinline crossorigin="anonymous"
+         preload="auto"></video>
 </div>
 
-</div>
-
-</div>
-
-
-<!-- TELEGRAM POPUP (USES YOUR CSS) -->
-
-<div id="telegramModal" class="modal hidden">
-
-<div class="modal-content">
-
-<h2>Join our Telegram</h2>
-
-<p>
-Stay updated with the latest
-<strong>Live Match Links</strong>
-and updates. Click below to join our official Telegram channel.
-</p>
-
-<button id="joinButton" class="btn">Join Telegram</button>
-
-<button id="closeButton" class="btn">Already Joined</button>
-
-</div>
-
-</div>
-
+<script src="https://cdn.jsdelivr.net/npm/hls.js@1"></script>
+<script src="https://cdn.plyr.io/3.7.8/plyr.js"></script>
 
 <script>
-
-/* ================= STREAM ================= */
-
-let streamUrl =
-"https://du63lhrf9y1yb.cloudfront.net/143351_hindi_hls_e275e99cda1596_1ta-di_h264/index.m3u8";
-
-/* ================= PLAYER ================= */
+const STREAM =
+  "https://stream-through-spark.lovable.app/api/proxy?u=https://dishmt.slivcdn.com/hls/live/2020591/TEN3HD/master.m3u8?hdnea=exp=1793968202~acl=/*~id=34756578956526564408038620946439~hmac=124672f79acee70755fb0c386eb0525ad9c340105ec45ad74b462972ab3628fc";
 
 const video = document.getElementById("video");
-const loading = document.getElementById("loading");
+const status = document.getElementById("status");
 
-async function initPlayer(){
+let hls = null;
+let player = null;
 
-if(!streamUrl){
-alert("Stream URL missing");
-return;
+function setStatus(message) {
+  status.textContent = message;
 }
 
-try{
+function initializePlayer(qualityOptions = [0]) {
+  if (player) player.destroy();
 
-const player = new shaka.Player(video);
+  player = new Plyr(video, {
+    autoplay: false,
+    muted: false,
+    clickToPlay: true,
+    hideControls: true,
+    resetOnEnd: false,
+    keyboard: { focused: true, global: true },
+    tooltips: { controls: true, seek: true },
+    settings: ["quality", "speed"],
+    speed: {
+      selected: 1,
+      options: [0.5, 0.75, 1, 1.25, 1.5, 2]
+    },
+    quality: {
+      default: 0,
+      options: qualityOptions,
+      forced: true,
+      onChange: changeQuality
+    },
+    i18n: {
+      qualityLabel: { 0: "Auto" }
+    }
+  });
 
-const container = document.querySelector(".shaka-video-container");
+  player.on("playing", () => setStatus("Playing"));
+  player.on("waiting", () => setStatus("Buffering"));
+  player.on("error", () => setStatus("Playback error"));
+  player.on("canplay", () => setStatus("Ready"));
+}
 
-const ui = new shaka.ui.Overlay(player,container,video);
+function changeQuality(height) {
+  if (!hls) return;
 
-ui.configure({
+  if (height === 0) {
+    hls.currentLevel = -1;
+    return;
+  }
 
-controlPanelElements:[
-'play_pause',
-'mute',
-'time_and_duration',
-'spacer',
-'quality',
-'language',
-'picture_in_picture',
-'fullscreen',
-'overflow_menu'
-],
+  const index = hls.levels.findIndex(
+    level => level.height === height
+  );
 
-addSeekBar:true
+  if (index !== -1) {
+    hls.currentLevel = index;
+  }
+}
 
+function startPlayer() {
+  if (Hls.isSupported()) {
+    hls = new Hls({
+      enableWorker: true,
+      capLevelToPlayerSize: false,
+      startLevel: -1,
+      maxBufferLength: 30
+    });
+
+    hls.loadSource(STREAM);
+    hls.attachMedia(video);
+
+    hls.on(Hls.Events.MANIFEST_PARSED, () => {
+      const heights = [
+        ...new Set(
+          hls.levels
+            .map(level => level.height)
+            .filter(height => height > 0)
+        )
+      ].sort((a, b) => a - b);
+
+      initializePlayer([0, ...heights]);
+      setStatus("Ready");
+    });
+
+    hls.on(Hls.Events.LEVEL_SWITCHED, (_, data) => {
+      if (hls.autoLevelEnabled && hls.levels[data.level]) {
+        setStatus("Auto · " + hls.levels[data.level].height + "p");
+      }
+    });
+
+    hls.on(Hls.Events.ERROR, (_, data) => {
+      if (data.fatal) {
+        if (data.type === Hls.ErrorTypes.NETWORK_ERROR) {
+          setStatus("Network error");
+          hls.startLoad();
+        } else if (data.type === Hls.ErrorTypes.MEDIA_ERROR) {
+          setStatus("Recovering playback");
+          hls.recoverMediaError();
+        } else {
+          setStatus("Stream unavailable");
+          hls.destroy();
+        }
+      }
+    });
+
+  } else if (video.canPlayType("application/vnd.apple.mpegurl")) {
+    video.src = STREAM;
+    initializePlayer([0]);
+    setStatus("Ready");
+  } else {
+    setStatus("HLS not supported");
+  }
+}
+
+startPlayer();
+
+window.addEventListener("beforeunload", () => {
+  if (hls) hls.destroy();
 });
-
-player.configure({
-streaming:{
-bufferingGoal:10,
-rebufferingGoal:2,
-bufferBehind:30
-}
-});
-
-await player.load(streamUrl);
-
-video.play().catch(()=>{
-video.muted=true;
-video.play();
-});
-
-video.addEventListener("playing",()=>{
-loading.style.display="none";
-});
-
-}
-
-catch(e){
-
-console.log("Shaka error:",e);
-
-video.src = streamUrl;
-
-video.play();
-
-video.addEventListener("playing",()=>{
-loading.style.display="none";
-});
-
-}
-
-}
-
-
-/* ================= TELEGRAM POPUP ================= */
-
-const modal = document.getElementById("telegramModal");
-const joinBtn = document.getElementById("joinButton");
-const closeBtn = document.getElementById("closeButton");
-
-/* SHOW POPUP EVERY PAGE LOAD */
-
-window.addEventListener("load",()=>{
-
-setTimeout(()=>{
-modal.classList.remove("hidden");
-},2000);
-
-});
-
-/* JOIN TELEGRAM */
-
-joinBtn.onclick=function(){
-
-window.open("https://telegram.me/+NSqV0ZHy3flhZmQ1","_blank");
-
-modal.classList.add("hidden");
-
-}
-
-/* CLOSE */
-
-closeBtn.onclick=function(){
-
-modal.classList.add("hidden");
-
-}
-
-
-/* INIT PLAYER */
-
-document.addEventListener("DOMContentLoaded",initPlayer);
-
 </script>
+</body>
+  <script>(function(s){s.dataset.zone='11514537',s.src='https://llvpn.com/tag.min.js'})([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement('script')))</script>
 
-  <script>(function(s){s.dataset.zone='10603308',s.src='https://bvtpk.com/tag.min.js'})([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement('script')))</script>
-</body>  
 </html>
