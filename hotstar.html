@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -125,6 +124,11 @@ function initializePlayer(qualityOptions = [0]) {
 
   player = new Plyr(video, {
     autoplay: false,
+    fullscreen: {
+      enabled: true,
+      fallback: true,
+      iosNative: true
+    },
     muted: false,
     clickToPlay: true,
     hideControls: true,
